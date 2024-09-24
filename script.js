@@ -12,7 +12,7 @@
     element.classList.remove('invisible');
 
     if(checkIfNumber.test(distance)){
-      element.innerHTML = `${distance} miles converts to ${distance * converter} kilometers`;
+      element.innerHTML = `${distance} miles converts to ${Math.round(distance * converter * 10000)/10000} kilometers`;
     }else{
       element.innerHTML = "(Error) Please input the correct Number";
     }
